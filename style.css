@@ -1,0 +1,17 @@
+h1, p {
+  font-family: Lato;
+}
+
+button {
+  padding : 8px;
+  margin : 5px;
+  border-radius : 5px;
+  height : 30px;
+}
+
+input {
+  padding : 8px;
+  height : 15px;
+  border-radius : 10px;
+  border-color : grey;
+}
