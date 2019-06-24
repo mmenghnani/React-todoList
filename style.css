@@ -9,6 +9,10 @@ button {
   height : 30px;
 }
 
+*:focus {
+  outline:none;
+}
+
 input {
   padding : 8px;
   height : 15px;

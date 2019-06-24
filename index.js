@@ -59,7 +59,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ul>Active task list
+        <p>Hi, You have {this.state.tasks.length} active tasks pending</p>
+        <p>Active task list</p>
+        <ul>
         {this.state.tasks.length > 0 ? this.state.tasks.map((item,index) => 
               <li key={index}>{item}  
                 <button onClick={(e) => this.addCompletedTasks(index,e)}>Completed</button>
@@ -67,12 +69,13 @@ class App extends Component {
               </li>
         ) : null}
         </ul>
-        <ul>Completed task list
+        <p>Completed task list</p>
+        <ul>
           {this.state.completedTasks.length > 0 ? this.state.completedTasks.map((item,index)=> <li key={index}>{item}</li>) : null}
         </ul>
         <form onSubmit={this.addTask}>
         <label>Add your task: </label>
-        <input placeholder="your task name" value={this.state.currTask} onChange={this.onChange}></input>
+        <input placeholder="e.g. haircut" value={this.state.currTask} onChange={this.onChange}></input>
           <button type="submit">Submit</button>
           <button type="cancel" onClick={this.cancelAdd}>Cancel</button>
         </form>
