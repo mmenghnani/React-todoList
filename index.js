@@ -59,17 +59,18 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>Hi, You have {this.state.tasks.length} active tasks pending</p>
-        <p>Active task list</p>
+        <div className="heading">Wonderlist</div>
+        <p>You have {this.state.tasks.length} active tasks pending</p>
+        <div className="title text">Active</div>
         <ul>
         {this.state.tasks.length > 0 ? this.state.tasks.map((item,index) => 
-              <li key={index}>{item}  
+              <li className="task" key={index}>{item}  
                 <button onClick={(e) => this.addCompletedTasks(index,e)}>Completed</button>
                 <button onClick={e => this.deleteTask(index,e)}>Delete</button>
               </li>
         ) : null}
         </ul>
-        <p>Completed task list</p>
+        <div className="title text">Completed</div>
         <ul>
           {this.state.completedTasks.length > 0 ? this.state.completedTasks.map((item,index)=> <li key={index}>{item}</li>) : null}
         </ul>
